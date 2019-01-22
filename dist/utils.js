@@ -21,7 +21,7 @@ function wrapAsyncHandler(handler) {
                     return next(error);
                 }
                 else {
-                    console.log(error.stack);
+                    console.error(error.stack);
                     return next(new restify_errors_1.InternalServerError());
                 }
             });
