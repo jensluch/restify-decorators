@@ -21,7 +21,7 @@ export function wrapAsyncHandler (handler: RequestHandler): RequestHandler {
                 if (error instanceof HttpError) {
                     return next(error)
                 } else {
-                    console.log(error.stack);
+                    console.error(error.stack);
                     return next(new InternalServerError())
                 }
             })
